@@ -10,9 +10,6 @@ models:
             tests:
                 - unique
                 - not_null
-                - accepted_values:
-                    values: [1, 2]
-                    quote: false
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
@@ -22,6 +19,10 @@ models:
             tests:
                 - unique
                 - not_null
+                - relationships:
+                    to: ref('my_first_dbt_model')
+                    field: id
+
     - name: snowflake_customer_purchases
       description: "total purchases by customer"
       columns:
