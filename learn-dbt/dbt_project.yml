@@ -35,4 +35,9 @@ models:
   cm_learn_dbt:
       # Applies to all files under models/example/
       example:
-          materialized: view
+          materialized: table
+
+vars:
+  my_first_variable: True
+  my_second_variable: 2021
+  my_third_variable: 1

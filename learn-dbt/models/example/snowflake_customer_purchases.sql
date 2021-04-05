@@ -1,4 +1,4 @@
-{{ config(materialized="table") }}
+{{ config(materialized='table') }}
 
 SELECT c.c_custkey, c.c_name, c.c_nationkey AS nation, SUM(o.o_totalprice) AS total_order_price
 FROM "SNOWFLAKE_SAMPLE_DATA"."TPCH_SF1"."CUSTOMER" c
