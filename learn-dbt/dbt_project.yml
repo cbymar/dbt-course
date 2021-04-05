@@ -36,8 +36,6 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: table
-  post-hook: 'grant usage on schema {{target.this}} to role analyst'
-  post-hook: 'grant select on {{this}} to role analyst'
 
 
 vars:
