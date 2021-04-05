@@ -38,6 +38,8 @@ models:
           materialized: table
 
 vars:
+  max_acctbal_sum: 100000000
   my_first_variable: True
   my_second_variable: 2021
   my_third_variable: 1
+

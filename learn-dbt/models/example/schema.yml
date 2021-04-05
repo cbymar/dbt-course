@@ -9,7 +9,6 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
-                - not_null
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
@@ -37,6 +36,18 @@ models:
           tests: 
             - unique
             - not_null
-    - name: dates
     - name: times
     - name: maxtime
+    - name: playing_with_tests
+      description: "Trying schema based tests"
+      columns:
+          - name: c_custkey
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: c_mktsegment
+            description: "Market segment"
+            tests:
+                - accepted_values:
+                    values: ['BUILDING', 'AUTOMOBILE', 'MACHINERY', 'HOUSEHOLD', 'FURNITURE']
